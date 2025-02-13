@@ -1,0 +1,17 @@
+.feedback {
+    border: 2px solid rgb(120, 179, 196);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: flex-start;
+    width: 200px;
+    margin-top: 20px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feedback p {
+    font-size: 24px;
+    margin: 5px 0;
+}
