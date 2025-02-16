@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Feedback from './src/components/Feedback/Feedback';
 import Options from './src/components/Options/Options';
 import Notification from './src/components/Notification/Notification';
+import Description from './src/components/Description/Description';
 import './App.css';
 
 const App = () => {
@@ -34,17 +35,11 @@ const App = () => {
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
 
   const positivePercentage =
-    totalFeedback > 0
-      ? Math.round(((feedback.good + feedback.neutral) / totalFeedback) * 100)
-      : 0;
+    totalFeedback > 0 ? Math.round((feedback.good / totalFeedback) * 100) : 0;
 
   return (
     <div id="container">
-      <h1 id="title">Sip Happens Café</h1>
-      <p id="text">
-        Please leave your feedback about our service by selecting one of the
-        options below.
-      </p>
+      <Description />
       <Options
         updateFeedback={updateFeedback}
         resetFeedback={resetFeedback}
